@@ -1,0 +1,54 @@
+<resources>
+	<string name="app_name">打卡</string>
+
+	<string name="part1">
+		需要驻留后台才能保证定时打卡。应用在后台时会常驻一个通知，否则没有通知。\n\n
+		学校的服务器会根据你的cookie来判断你的身份，所以需要通过抓包的方式获取自己的cookie。\n
+		先把这些全部看完一遍再开始操作。\n
+		有两种抓包方法。\n\n
+		手机抓包：（需要安卓版本低于11）\n
+		安装应用HttpCanary (页面底部有下载链接)，在初次打开的时候会提示你安装证书，安装。\n
+		进入主界面后点击中间的加号，把微信添加至列表。如果不添加则会对所有应用抓包。
+	</string>
+
+	<string name="part2">
+		然后回到主界面，做好等一下开启抓包的准备。\n
+		现在切到微信，打开中山学院服务号；\n
+		切到HttpCanary，点击右下角的圆形按钮开始抓包，然后切到微信，点击健康上报“健康上报”，加载完之后回到HttpCanary，再次点击右下角的按钮停止抓包。\n
+		在列表中找出域名是srv.zsc.edu.cn的项目，点进去。
+	</string>
+
+	<string name="part3">
+		以图中框选的项目为例，点进去，切到“请求”那一栏，就能看见底部有显示Cookie，长按复制，粘贴到打卡机的cookie那一栏中。
+	</string>
+
+	<string name="part4">
+		\n
+		电脑抓包：(Windows)\n
+		安装软件Fiddler，解压，打开里面的Fiddler.exe，点击顶部菜单栏的工具→选项，切到HTTPS那一栏，然后点击动作→信任根证书，然后按提示安装证书。\n
+		安装完成后按图示勾选。然后点击确定。\n
+	</string>
+
+	<string name="part5">
+		查看左下角的这个框有没有显示“捕获”，如果有就点一下。
+	</string>
+
+	<string name="part6">
+		登录电脑微信，找到中山学院服务号。这个时候点击Fiddler左下角的框启用捕获，然后再点开微信的健康上报。加载完成后返回到Fiddler，点击左下角停止捕获。
+		这时候应该能看到列表中有几个选项，点击图中所示的那一项。
+	</string>
+
+	<string name="part7">
+		把图中框选的部分复制出来，传到手机，粘贴到打卡机的cookie栏中。
+	</string>
+
+	<string name="part8">
+		最终结果是这样的
+	</string>
+
+	<string name="part9">
+		\n\n
+		注意：\n
+		省和市的格式如图所示，也就是省的后面不要加“省”字，市后面要加“市”字。
+	</string>
+</resources>
