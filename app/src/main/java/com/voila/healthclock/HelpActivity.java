@@ -17,9 +17,10 @@ public class HelpActivity extends AppCompatActivity
 
         TextView hc=findViewById(R.id.hcdl);
         TextView fd=findViewById(R.id.fddl);
+        TextView cd=findViewById(R.id.code);
 
         hc.setOnClickListener((view)-> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://mc1106.cn/httpcanary.apk"))));
         fd.setOnClickListener((view)-> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://mc1106.cn/fiddler.rar"))));
-
+        cd.setOnClickListener((view)-> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/voila1106/hclock"))));
     }
 }
